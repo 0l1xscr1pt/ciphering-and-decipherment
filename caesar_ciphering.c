@@ -9,7 +9,7 @@ size_t ft_strlen(char *str) {
 	return i;
 }
 
-char *encrypt(char *str, int gap) {
+char *ciphering(char *str, int gap) {
 	int i;
 	char *new_string;
 	size_t len;
@@ -24,7 +24,7 @@ char *encrypt(char *str, int gap) {
 		else if (str[i] >= 'a' && str[i] <= 'z')
 			new_string[i] = (new_string[i] - 'a' + gap) % 26 + 'a';
 		else if (str[i] >= '0' && str[i] <= '9')
-			new_string[i] = (new_string[i] - '0' + gap) % 9 + '0';
+			new_string[i] = (new_string[i] - '0' + gap) % 10 + '0';
 		i++;
 	}
 }
