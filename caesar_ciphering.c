@@ -27,4 +27,5 @@ char *ciphering(char *str, int gap) {
 			new_string[i] = (new_string[i] - '0' + gap) % 10 + '0';
 		i++;
 	}
+	return new_string;
 }
